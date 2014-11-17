@@ -4,7 +4,9 @@ var server = http.createServer(function(req, res)
 	res.write('Hello World');
 	res.end();
 });
+
+var port = process.env.PORT || 9000;
 server.listen(9000, function()
 {
-	console.log('listening on port 9000');
+	console.log('listening on %d', port);
 });
